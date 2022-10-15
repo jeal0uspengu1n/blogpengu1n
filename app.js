@@ -15,7 +15,7 @@ mongoose.connect(mongoDBUrl).then((result) => console.log('connected to mongoDB'
 
 // start of code
 
-app.listen(6969);
+app.listen(process.env.PORT || 6969);
 
 app.get('/', (req,res) => {
     res.redirect('/blogs');
